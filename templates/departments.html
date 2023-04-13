@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Department</title>
+<link rel="stylesheet" href="/static/cool.css">
+</head>
+
+<body>
+  <h2>Departments with respective IDs</h2>
+    <table border="1">
+        <th>ID</th><th>Name</th><th>Dept_no</th>
+        
+        {# This is a comment #}
+        {% for department in departments %}
+          <tr>
+          <td>{{department.ID}}</td>
+          <td>{{department.name}}</td>
+          <td>{{department.dept_no}}</td>
+          </tr>
+        {% endfor %}
+    </table>
+    <a class="form_links" href="{{url_for('logout') }}"><button class="but">Logout</button></a>
+    <a class="form_links" href="{{url_for('products')}}"><button class="but">product</button></a>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Products</title>
+<link rel="stylesheet" href="/static/cool.css">
+</head>
+
+<body>
+    <h2>Products and SKUs</h2>
+    {# block body #}
+    <table border="1">
+        <th>ID</th><th>Product</th><th>SKU</th>
+        
+        {# This is a comment #}
+        {% for product in products %}
+          <tr>
+          <td>{{product.ID}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.sku}}</td>
+          </tr>
+        {% endfor %}
+        </table>
+
+    {# endblock #}
+    <div class="form_links">
+      <a class="form_links" href="{{url_for('logout') }}"><button class="but">Logout</button></a>
+      <a class="form_links" href="{{url_for('departments')}}"><button class="but">department</button></a>
+  </div>
+</body>
+
+</html>
+
